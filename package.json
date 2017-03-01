@@ -1,0 +1,13 @@
+{
+  "name": "autocommitlog",
+  "version": "1.0.0",
+  "description": "generate commit log ",
+  "main": "index.js",
+  "repository": "https://github.com/zhangzhaoaaa/autocommitlog.git",
+  "author": "zeromike",
+  "license": "MIT",
+  "scripts": {
+    "sa": "node ./allCommitLog.js",
+    "sc": "./selfCommitLog.sh"
+  }
+}
