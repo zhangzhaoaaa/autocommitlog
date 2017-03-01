@@ -36,7 +36,7 @@ do
 done
 (
 git -C "${REPO}" log --author="${AUTHOR}" --since="${SINCE}" --until="${UNTIL}" --format="%cd" --date=short | sort -u | while read DATE ; do
-  GIT_PAGER=$(git -C "${REPO}" log --no-merges --reverse --format="* %s" --since="${DATE} 00:00:00" --until="${DATE} 23:59:59" --author="${AUTHOR}")
+  GIT_PAGER=$(git -C "${REPO}" log --no-merges --reverse --format="* %s -> [view commit](https://github.com/zhangzhaoaaa/autocommitlog/commit/%h)" --since="${DATE} 00:00:00" --until="${DATE} 23:59:59" --author="${AUTHOR}")
   if [ ! -z "$GIT_PAGER" ]
   then
     echo "[${DATE}]"
